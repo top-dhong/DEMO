@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid</title>
+<style>
+// 参考地址:https://blog.csdn.net/Sodapease/article/details/128529631
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  .items {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+	grid-template-areas: 'a a a';
+    // grid-auto-flow: column;          
+
+	gap: 10px 20px;
+  }
+  
+  .item1 {
+	 grid-area: a;
+    background-color: #f2f2f2;
+  }
+ 
+</style>
+</head>
+<body>
+<div class="items">
+	<div class="item item1">item</div>
+	<div class="item">item</div>
+	<div class="item">item</div>
+	<div class="item">item</div>
+	<div class="item">item</div>
+	<div class="item">item</div>
+	<div class="item">item</div>
+	<div class="item">item</div>
+	<div class="item">item</div>
+	<div class="item">item</div>
+	<div class="item">item</div>
+	<div class="item">item</div>
+	<div class="item">item</div>
+</div>
+</body>
+</html>

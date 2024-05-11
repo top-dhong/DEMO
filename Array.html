@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Array</title>
+<style> 
+ 
+</style>
+<script>
+	// 参考地址:https://www.jb51.net/javascript/297656bc4.htm
+	var a = [1, 2, 3, 4, 5, 6]
+	var b = a.slice(0, 3);
+	// console.log("b", b)
+	
+	//splice(开始索引,结束索引) 语法一    splice返回的是截取掉的数据集合
+	var arr = [2, 63, 48, 5, 4, 75]
+	res = arr.splice(1,2)
+	console.log(1, arr);// [2, 5, 4, 75]
+	console.log(2, res);// [63, 48]
+	//******************************
+	//splice() 语法二
+	var arr = [2, 63, 48, 5, 4, 75]
+	res = arr.splice(1,1,99999,88888)
+	console.log(3, arr);
+	console.log(4, res);
+	
+	//concat
+	var arr = [10, 20, 10, 30, 40, 50, 60]
+	res = arr.concat(20,"小敏",50)
+	console.log(5, arr) // [10, 20, 10, 30, 40, 50, 60]
+	console.log(6, res);// [10, 20, 10, 30, 40, 50, 60, 20, '小敏', 50]
+	
+	var arr = [10, 20, 10, 30, 40, 50, 60]
+	res = arr.concat([20,"小敏",50])
+	console.log(7, arr) // [10, 20, 10, 30, 40, 50, 60]
+	console.log(8, res);// [10, 20, 10, 30, 40, 50, 60, 20, '小敏', 50]
+	
+	//every  只有所有的都满足条件返回的是true
+	var arr = [1, 2, 3, 4, 5]
+	console.log(9, '原始数组 : ', arr);
+	var res = arr.every(function (item) {
+		return item > 0
+	})
+	console.log(10, res);//打印结果  true
+	  
+	//some  只有有一个满足条件返回的是true
+	var arr = [1, 2, 3, 4, 5]
+	console.log(11, '原始数组 : ', arr);
+	var res = arr.some(function (item) {
+		return item > 3
+	})
+	console.log(12, res);//true
+	
+	//reduce
+	var arr = [1, 2, 3, 4, 5]
+	var res = arr.reduce(function (prev, item) {
+		return prev *= item
+	}, 1)
+	console.log(13, res);//120
+	
+	
+	var a = [
+	{
+	streamStatus: -1,
+	},
+	{
+	streamStatus: -1,
+	},
+	{
+	streamStatus: 1,
+	}
+	]
+	var b = a.every((item)=>item.streamStatus == -1)
+	console.log(14, b)
+
+</script>
+</head>
+<body>
+ 
+</body>
+</html>
